@@ -17,12 +17,13 @@ To ensure the model remains robust and compliant with Basel III regulatory stand
 
 #### **1. Weight of Evidence (WoE)**
 Used to linearize features and handle outliers, WoE measures the strength of a grouping for separating "Good" and "Bad" risk:
-$$WoE_i = \ln \left( \frac{\% \text{ Non-Events}_i}{\% \text{ Events}_i} \right)$$
- 
+
+$$WoE_i = \ln \left( \frac{\text{Dist. Non-Events}_i}{\text{Dist. Events}_i} \right)$$
+
 #### **2. Information Value (IV)**
 Variables were selected based on their Information Value to ensure maximum predictive power without overfitting:
 
-$$IV = \sum_{i=1}^{n} \left( \% \text{ Non-Events}_i - \% \text{ Events}_i \right) \times WoE_i$$
+$$IV = \sum_{i=1}^{n} \left( \text{Dist. Non-Events}_i - \text{Dist. Events}_i \right) \times WoE_i$$
 
 #### **3. Model Validation**
 The model's discriminatory power is evaluated via the **Gini Coefficient**, derived from the Area Under the ROC Curve (AUC):
