@@ -18,7 +18,7 @@ To ensure the model remains robust and compliant with Basel III regulatory stand
 #### **1. Weight of Evidence (WoE)**
 Used to linearize features and handle outliers, WoE measures the strength of a grouping for separating "Good" and "Bad" risk:
 $$WoE_i = \ln \left( \frac{\% \text{ Non-Events}_i}{\% \text{ Events}_i} \right)$$
-
+ 
 #### **2. Information Value (IV)**
 Variables were selected based on their Information Value to ensure maximum predictive power without overfitting:
 
